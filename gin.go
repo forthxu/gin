@@ -445,6 +445,7 @@ func (engine *Engine) handleHTTPRequest(c *Context) {
 			}
 		}
 	}
+	c.fullPath = rPath
 	c.handlers = engine.allNoRoute
 	serveError(c, http.StatusNotFound, default404Body)
 }

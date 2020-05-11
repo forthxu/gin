@@ -83,6 +83,9 @@ type Context struct {
 /************************************/
 /********** CONTEXT CREATION ********/
 /************************************/
+func (c *Context) AddHandlers(handlerFunc ...HandlerFunc) {
+       c.handlers = append(c.handlers, handlerFunc...)
+}
 
 func (c *Context) reset() {
 	c.Writer = &c.writermem
