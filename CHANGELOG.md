@@ -1,5 +1,9 @@
 # Gin ChangeLog
 
+## forthxu
+批量修改
+sed -i ""  "s/github.com\/gin-gonic\/gin/github.com\/forthxu\/gin/g" `grep "github.com/gin-gonic/gin" -rl . | grep ".go"`
+
 ## Gin v1.6.3
 
 ### ENHANCEMENTS

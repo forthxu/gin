@@ -20,8 +20,8 @@ import (
 	"time"
 
 	"github.com/gin-contrib/sse"
-	"github.com/gin-gonic/gin/binding"
-	"github.com/gin-gonic/gin/render"
+	"github.com/forthxu/gin/binding"
+	"github.com/forthxu/gin/render"
 )
 
 // Content-Type MIME of the most common data formats.
@@ -85,6 +85,14 @@ type Context struct {
 /************************************/
 func (c *Context) AddHandlers(handlerFunc ...HandlerFunc) {
        c.handlers = append(c.handlers, handlerFunc...)
+}
+
+func (c *Context) MuLock() {
+	c.mu.Lock()
+}
+
+func (c *Context) MuUnlock() {
+	c.mu.Unlock()
 }
 
 func (c *Context) reset() {

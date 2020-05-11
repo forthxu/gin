@@ -13,8 +13,8 @@ import (
 	"path"
 	"sync"
 
-	"github.com/gin-gonic/gin/internal/bytesconv"
-	"github.com/gin-gonic/gin/render"
+	"github.com/forthxu/gin/internal/bytesconv"
+	"github.com/forthxu/gin/render"
 )
 
 const defaultMultipartMemory = 32 << 20 // 32 MB
